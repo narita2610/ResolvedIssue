@@ -1,0 +1,19 @@
+■Issue 01: Batch file always output "ECHO is off"
++ Reason: Before and After of assignment operator have 'blank space'
++ Resolved method: delete blank space
+Ex:
++ Error script:
+  -----------------------
+  @echo off
+  set mess = hello world
+  echo %mess%
+  pause
+  -----------------------
++ Resolved script:
+  -----------------------
+  @echo off
+  set mess=hello world
+  echo %mess%
+  pause
+  -----------------------
+
